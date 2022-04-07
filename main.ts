@@ -34,6 +34,7 @@ input.onPinPressed(TouchPin.P1, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
+    paused = 0
     if (team == 0) {
         tug += 1
         radio.sendNumber(tug)
