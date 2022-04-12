@@ -35,15 +35,15 @@ let team = 0
 let admin = 0
 radio.setGroup(255)
 radio.setTransmitPower(7)
-admin = 1
-team = 0
+admin = 0
+team = 1
 play = 0
 tugMax = 20
 if (admin == 1) {
     tug = tugMax / 2
+} else {
     radio.sendString("joined")
 }
-basic.showString("Welcome!")
 basic.forever(function () {
     if (play == 1) {
         if (tug == 0) {
